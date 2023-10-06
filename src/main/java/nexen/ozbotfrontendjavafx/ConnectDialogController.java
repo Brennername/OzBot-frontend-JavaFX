@@ -17,10 +17,10 @@ import javafx.stage.Stage;
  */
 public class ConnectDialogController {
     @FXML
-    TextField channelTextInput;
+    private final TextField channelTextInput;
     @FXML
-    ListView channelListView;
-    
+    private final ListView channelListView;
+
 
     @FXML
     private void buttonCloseAction(ActionEvent evt)
