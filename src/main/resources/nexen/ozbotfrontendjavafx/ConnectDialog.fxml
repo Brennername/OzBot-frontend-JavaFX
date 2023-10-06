@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nexen.ozbotfrontendjavafx.Connect_DialogController">
+    
+</AnchorPane>
+-->
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane id="" fx:id="ConnectDialog" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="400.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nexen.ozbotfrontendjavafx.ConnectDialogController">
+  <center>
+      <VBox prefWidth="280.0">
+      <Label alignment="CENTER" text="Connect to Server" textAlignment="CENTER">
+         <graphic>
+            <ImageView fitHeight="47.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img1.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+  
+  
+      <VBox>
+         <children>
+            <Label text="Address" />
+            <TextField id="tf_address" promptText="e.g. us.undernet.org" />
+            <Label text="Port" />
+            <TextField id="tf_port" text="6667" />
+            <Label text="Nick" />
+            <TextField id="tf_nick" promptText="e.g. OzBot" />
+            <VBox>
+               <children>
+                  <Region minHeight="-Infinity" prefHeight="16.0" prefWidth="300.0" />
+                     <Label text="Channels" />
+                     <ListView fx:id="channelListView" prefHeight="100.0" style="-fx-border-color: rgb(0,0,0); -fx-border-width: 1px; -fx-border-style: solid;" />
+                     <HBox>
+                        <children>
+                           <TextField fx:id="channelTextInput" prefWidth="300.0" />
+                           <ButtonBar buttonMinWidth="7.0" prefWidth="100.0">
+                             <buttons>
+                                 <Button graphicTextGap="1.0" mnemonicParsing="false" onAction="#chanListButtonAddClicked" scaleX="0.75" scaleY="0.75">
+                                    <graphic>
+                                       <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                          <image>
+                                             <Image url="@plus.png" />
+                                          </image>
+                                       </ImageView>
+                                    </graphic>
+                                 </Button>
+                               <Button mnemonicParsing="false" onAction="#chanListButtonRemClicked" scaleX="0.75" scaleY="0.75">
+                                    <graphic>
+                                       <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                          <image>
+                                             <Image url="@minus.png" />
+                                          </image>
+                                       </ImageView>
+                                    </graphic>
+                                 </Button>
+                             </buttons>
+                           </ButtonBar>
+                        </children>
+                     </HBox>
+                     <Region layoutX="10.0" layoutY="10.0" minHeight="-Infinity" prefHeight="16.0" prefWidth="300.0" />
+               </children>
+            </VBox>
+            <HBox minHeight="-Infinity">
+               <children>
+                  <Button fx:id="button_connect" mnemonicParsing="false" onAction="#buttonConnectClicked" text="Connect" />
+                  <Region prefHeight="30.0" prefWidth="20.0" />
+                  <Button fx:id="buttonCancel" cancelButton="true" mnemonicParsing="false" onAction="#buttonCloseAction" text="Cancel" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      </VBox>
+  </center>
+   <left>
+      <Region minWidth="-Infinity" prefWidth="20.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <Region minWidth="-Infinity" prefWidth="20.0" BorderPane.alignment="CENTER" />
+   </right>
+   <bottom>
+      <Region prefHeight="20.0" BorderPane.alignment="CENTER" />
+   </bottom>
+   <top>
+      <Region prefHeight="20.0" BorderPane.alignment="CENTER" />
+   </top>
+</BorderPane>
