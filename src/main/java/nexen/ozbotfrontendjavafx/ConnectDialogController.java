@@ -25,6 +25,7 @@ public class ConnectDialogController {
     @FXML
     private void buttonCloseAction(ActionEvent evt)
     {
+        System.out.println("buttonCloseAction");
         ((Stage) ((Node)evt.getSource()).getScene().getWindow()).close();
             
     }
