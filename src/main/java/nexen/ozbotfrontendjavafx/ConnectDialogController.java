@@ -17,9 +17,9 @@ import javafx.stage.Stage;
  */
 public class ConnectDialogController {
     @FXML
-    private final TextField channelTextInput;
+    private TextField channelTextInput;
     @FXML
-    private final ListView channelListView;
+    private ListView channelListView;
 
 
     @FXML
